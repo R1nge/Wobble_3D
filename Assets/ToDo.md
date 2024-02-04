@@ -1,7 +1,5 @@
-﻿Levels:
-Location,
-Holes,
-Balls
+﻿
+Rotate platform with limits
+Prevent ball from falling off the platform
 
-
-Auto detect and copy to an array
+Levels
