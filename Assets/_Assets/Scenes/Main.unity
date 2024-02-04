@@ -250,7 +250,7 @@ MonoBehaviour:
   - location: {fileID: 4316636003016284558, guid: 8bac67ac54b33764aad1d8fea1da3243, type: 3}
     ball: {fileID: 4557584988140747492, guid: 8542255c1d5bb134181d25364d3a8994, type: 3}
     ballPositions:
-    - {x: 2.9482312, y: 0, z: -2.63441}
+    - {x: 2.9482312, y: 1, z: -2.63441}
     hole: {fileID: 8819037055388547259, guid: 0caebc75b419d8c42a228f9f07528cbc, type: 3}
     holePositions:
     - {x: -3.555461, y: 0.0000009536743, z: 2.648981}
