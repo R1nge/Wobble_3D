@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d38ddbdbc64448b392b6ad3c415f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 1.5
+  sensitivity: 5
   rotationLimitX: 90
-  rotationLimitY: 90
+  rotationLimitZ: 90
 --- !u!1 &7389279259010724261
 GameObject:
   m_ObjectHideFlags: 0
