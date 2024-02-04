@@ -1,4 +1,5 @@
 ﻿using System;
+using TriInspector;
 using UnityEngine;
 
 namespace _Assets.Scripts.Services
@@ -6,9 +7,12 @@ namespace _Assets.Scripts.Services
     [Serializable]
     public struct LevelData
     {
+        [Required]
         public GameObject location;
+        [Required]
         public GameObject ball;
         public Vector3[] ballPositions;
+        [Required]
         public GameObject hole;
         public Vector3[] holePositions;
 

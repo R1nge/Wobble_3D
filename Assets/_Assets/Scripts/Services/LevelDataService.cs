@@ -24,7 +24,6 @@ namespace _Assets.Scripts.Services
         [Button]
         public void AddCurrentLevel()
         {
-            var location = FindObjectOfType<Location>();
             var balls = FindObjectsOfType<Ball>();
             var holes = FindObjectsOfType<Hole>();
             
