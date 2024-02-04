@@ -8,7 +8,7 @@ namespace _Assets.Scripts.Game
         [SerializeField] private float rotationLimitX, rotationLimitZ;
         private Vector3 _look;
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (Input.GetMouseButton(0))
             {

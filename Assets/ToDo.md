@@ -1,5 +1,4 @@
 ﻿
-Rotate location with limits
 Prevent balls from falling off the location
 
 UI:
