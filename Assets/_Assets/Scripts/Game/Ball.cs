@@ -1,15 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace _Assets.Scripts.Game
 {
     public class Ball : MonoBehaviour
     {
+        [SerializeField] private float gravityMultiplier = 1;
         [SerializeField] private new Rigidbody rigidbody;
         [SerializeField] private MeshRenderer meshRenderer;
         [SerializeField] private Color lockedColor;
         private Vector3 _rotation;
         private Color _color;
+
+        private void Update()
+        {
+            rigidbody.AddForce(Vector3.down * (-Physics.gravity.y * gravityMultiplier), ForceMode.Acceleration);
+        }
 
         public void Lock()
         {

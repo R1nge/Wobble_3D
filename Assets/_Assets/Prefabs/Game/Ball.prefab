@@ -126,9 +126,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4557584988140747492}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -140,11 +140,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 3
 --- !u!135 &6434235842560029279
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 454b88734bc249b28ae9937693d00d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gravityMultiplier: 16
   rigidbody: {fileID: 5888514517858335496}
   meshRenderer: {fileID: 2302339394697860611}
   lockedColor: {r: 0, g: 0, b: 0, a: 1}
