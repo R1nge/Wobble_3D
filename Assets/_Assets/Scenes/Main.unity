@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: db5c677d2cd502d438430e1189e084be, type: 2}
     - target: {fileID: -4959896067118704953, guid: 8defaa2de29d1f24c91faa6e1a9a9e4b, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -3753303667710993466, guid: 8defaa2de29d1f24c91faa6e1a9a9e4b, type: 3}
       propertyPath: m_Materials.Array.size
