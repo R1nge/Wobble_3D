@@ -1,5 +1,7 @@
 ﻿using System.Collections;
+using _Assets.Scripts.Services;
 using UnityEngine;
+using VContainer;
 
 namespace _Assets.Scripts.Game
 {
@@ -9,6 +11,7 @@ namespace _Assets.Scripts.Game
         [SerializeField] private BoxCollider whole;
         private Vector3 _wholeStartSize;
         private readonly YieldInstruction _wait = new WaitForSeconds(.005f);
+        [Inject] private LevelProgressService _levelProgressService;
 
         private void Awake() => _wholeStartSize = whole.size;
 
@@ -46,6 +49,7 @@ namespace _Assets.Scripts.Game
             {
                 ball.Lock();
                 ball.transform.parent = transform;
+                _levelProgressService.LockTile();
             }
         }
     }

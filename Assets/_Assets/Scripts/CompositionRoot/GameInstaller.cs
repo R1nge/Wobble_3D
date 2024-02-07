@@ -17,6 +17,8 @@ namespace _Assets.Scripts.CompositionRoot
         {
             builder.RegisterComponent(levelDataService);
 
+            builder.Register<LevelProgressService>(Lifetime.Singleton);
+
             builder.Register<LocationFactory>(Lifetime.Singleton);
             builder.Register<BallFactory>(Lifetime.Singleton);
             builder.Register<HoleFactory>(Lifetime.Singleton);

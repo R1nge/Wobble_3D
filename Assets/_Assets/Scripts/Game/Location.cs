@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using _Assets.Scripts.Services;
+using UnityEngine;
+using VContainer;
 
 namespace _Assets.Scripts.Game
 {
@@ -8,9 +10,12 @@ namespace _Assets.Scripts.Game
         [SerializeField] private float rotationMinLimitX = 25, rotationMaxLimitX = 15, rotationMinLimitZ = 20, rotationMaxLimitZ = 20;
         [SerializeField] private Tile[] tiles;
         private Vector3 _look;
+        [Inject] private LevelProgressService _levelProgressService;
 
         private void Start()
         {
+            _levelProgressService.Init(tiles);
+            
             foreach (var tile in tiles)
             {
                 tile.Open();
