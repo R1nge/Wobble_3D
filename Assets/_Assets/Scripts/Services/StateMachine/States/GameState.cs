@@ -32,6 +32,7 @@ namespace _Assets.Scripts.Services.StateMachine.States
 
         public void Exit()
         {
+            //3 State ( Init, one when the game is started, and another when the player wins)
             _levelDataService.NextLevel();
             _levelProgressService.Reset();
         }

@@ -18,6 +18,11 @@ namespace _Assets.Scripts.Services.StateMachine
             _levelProgressService = levelProgressService;
         }
 
+        public IGameState CreateInitState(GameStateMachine stateMachine)
+        {
+            return new InitState();
+        }
+
         public IGameState CreateGameState(GameStateMachine stateMachine)
         {
             return new GameState(stateMachine, _levelDataService, _locationFactory, _ballFactory, _levelProgressService);
