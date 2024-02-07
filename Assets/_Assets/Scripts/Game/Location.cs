@@ -4,9 +4,18 @@ namespace _Assets.Scripts.Game
 {
     public class Location : MonoBehaviour
     {
-        [SerializeField] private float sensitivity = 1.5f;
-        [SerializeField] private float rotationMinLimitX,rotationMaxLimitX, rotationMinLimitZ, rotationMaxLimitZ;
+        [SerializeField] private float sensitivity = .5f;
+        [SerializeField] private float rotationMinLimitX = 25, rotationMaxLimitX = 15, rotationMinLimitZ = 20, rotationMaxLimitZ = 20;
+        [SerializeField] private Tile[] tiles;
         private Vector3 _look;
+
+        private void Start()
+        {
+            foreach (var tile in tiles)
+            {
+                tile.Open();
+            }
+        }
 
         private void FixedUpdate()
         {

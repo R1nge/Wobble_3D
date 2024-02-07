@@ -25,7 +25,7 @@ namespace _Assets.Scripts.Services
         public void AddCurrentLevel()
         {
             var balls = FindObjectsOfType<Ball>();
-            var holes = FindObjectsOfType<Hole>();
+            var holes = FindObjectsOfType<Tile>();
             
             var holePositions = new Vector3[holes.Length];
             for (int i = 0; i < holes.Length; i++)
