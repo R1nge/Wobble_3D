@@ -12,13 +12,7 @@ namespace _Assets.Scripts.Services
 
         public LevelData CurrentData => levelData[_currentLevel];
 
-        public void NextLevel()
-        {
-            if (_currentLevel < levelData.Count)
-            {
-                _currentLevel++;
-            }
-        }
+        public void NextLevel() => _currentLevel = (_currentLevel + 1) % levelData.Count;
 
         [Title("Add current level")]
         [Button]

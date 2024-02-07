@@ -8,15 +8,15 @@ namespace _Assets.Scripts.Services.StateMachine.States
         private readonly LevelDataService _levelDataService;
         private readonly LocationFactory _locationFactory;
         private readonly BallFactory _ballFactory;
-        private readonly HoleFactory _holeFactory;
+        private readonly LevelProgressService _levelProgressService;
 
-        public GameState(GameStateMachine stateMachine, LevelDataService levelDataService, LocationFactory locationFactory, BallFactory ballFactory, HoleFactory holeFactory)
+        public GameState(GameStateMachine stateMachine, LevelDataService levelDataService, LocationFactory locationFactory, BallFactory ballFactory, LevelProgressService levelProgressService)
         {
             _stateMachine = stateMachine;
             _levelDataService = levelDataService;
             _locationFactory = locationFactory;
             _ballFactory = ballFactory;
-            _holeFactory = holeFactory;
+            _levelProgressService = levelProgressService;
         }
 
         public void Enter()
@@ -28,16 +28,12 @@ namespace _Assets.Scripts.Services.StateMachine.States
                 var ball = _ballFactory.Create();
                 ball.transform.position = _levelDataService.CurrentData.ballPositions[i];
             }
-
-            for (int i = 0; i < _levelDataService.CurrentData.holePositions.Length; i++)
-            {
-                var hole = _holeFactory.Create();
-                hole.transform.position = _levelDataService.CurrentData.holePositions[i];
-            }
         }
 
         public void Exit()
         {
+            _levelDataService.NextLevel();
+            _levelProgressService.Reset();
         }
     }
 }

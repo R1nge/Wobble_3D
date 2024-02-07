@@ -29,6 +29,8 @@ namespace _Assets.Scripts.CompositionRoot
 
             builder.Register<GameStatesFactory>(Lifetime.Singleton);
             builder.Register<GameStateMachine>(Lifetime.Singleton);
+
+            builder.RegisterEntryPoint<GameWinService>();
         }
     }
 }
